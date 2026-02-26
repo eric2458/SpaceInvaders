@@ -4,6 +4,12 @@ public class GameManager : MonoBehaviour
 {
     void Start()
     {
-       // todo - sign up for notification about enemy death 
+        Enemy.OnEnemyDied += OnEnemyDied;
+        // todo - sign up for notification about enemy death 
+    }
+
+    void OnEnemyDied(float score)
+    {
+        Debug.Log($"Killed enemy worth {score}");
     }
 }
