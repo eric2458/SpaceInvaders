@@ -7,6 +7,7 @@ public class Enemy : MonoBehaviour
         Debug.Log("Ouch!");
         
         // todo - destroy the bullet
+        Destroy(shot);
         // todo - trigger death animation
     }
 }
