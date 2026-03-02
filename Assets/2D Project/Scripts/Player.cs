@@ -21,6 +21,7 @@ public class Player : MonoBehaviour
             // todo - destroy the bullet after 3 seconds
             Destroy(shot, 3f);
             // todo - trigger shoot animation
+            GetComponent<Animator>().SetTrigger("Shot Trigger");
         }
     }
 }
