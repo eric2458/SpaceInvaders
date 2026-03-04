@@ -96,7 +96,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ticClip: {fileID: 8300000, guid: 07c82966e096040db85cc71b5b9855ab, type: 3}
   tacClip: {fileID: 8300000, guid: 37424972d242742a4a10a5a43557bc80, type: 3}
-  points: 20
+  points: 3
 --- !u!212 &8699358085167830842
 SpriteRenderer:
   serializedVersion: 2
@@ -164,7 +164,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7719851005951690284}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 0fe3c0042092f4c5b8ccd1adc99b9578, type: 2}
   m_CullingMode: 0

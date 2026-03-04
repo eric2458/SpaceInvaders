@@ -21,12 +21,17 @@ public class EnemyBullet : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Destroy(collision.gameObject);
+            if (GameManager.Instance != null)
+            {
+                GameManager.Instance.GameOver();
+            }
+
             Destroy(gameObject);
         }
-        //else if (collision.gameObject.CompareTag("Barricade"))
-        //{
-         //   Destroy(gameObject);
-        //}
+        
+        else if (collision.gameObject.CompareTag("Barricade"))
+        {
+            Destroy(gameObject);
+        }
     }
 }

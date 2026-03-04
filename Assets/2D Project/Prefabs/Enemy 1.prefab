@@ -96,7 +96,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ticClip: {fileID: 8300000, guid: 07c82966e096040db85cc71b5b9855ab, type: 3}
   tacClip: {fileID: 8300000, guid: 37424972d242742a4a10a5a43557bc80, type: 3}
-  points: 5
+  points: 10
 --- !u!212 &8699358085167830842
 SpriteRenderer:
   serializedVersion: 2
