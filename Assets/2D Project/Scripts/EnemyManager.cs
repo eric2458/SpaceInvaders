@@ -118,7 +118,7 @@ public class EnemyManager : MonoBehaviour
         int index = Random.Range(0, transform.childCount);
         Transform shooter = transform.GetChild(index);
 
-        Vector3 spawnPos = shooter.position + Vector3.down * bulletSpawnOffsetY;
+        Vector3 spawnPos = shooter.position + Vector3.down * 0.6f;
         Instantiate(enemyBulletPrefab, spawnPos, Quaternion.identity);
     }
 

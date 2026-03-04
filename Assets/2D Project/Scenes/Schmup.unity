@@ -258,6 +258,8 @@ MonoBehaviour:
   scoreText: {fileID: 761980846}
   highScoreText: {fileID: 1164669563}
   overlayPanel: {fileID: 1198633995}
+  overlayMessage: {fileID: 0}
+  overlayAutoHideSeconds: 3
 --- !u!4 &106117283
 Transform:
   m_ObjectHideFlags: 0
@@ -982,7 +984,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1198633996
 RectTransform:
   m_ObjectHideFlags: 0
