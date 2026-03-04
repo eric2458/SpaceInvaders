@@ -23,11 +23,17 @@ public class EnemyManager : MonoBehaviour
     [Header("Bounds")]
     [SerializeField] private float leftEdge = -8.5f;
     [SerializeField] private float rightEdge = 8.5f;
+    
+    [Header("Enemy Shooting")]
+    [SerializeField] private GameObject enemyBulletPrefab;
+    [SerializeField] private float shootInterval = 1.2f;
+    [SerializeField] private float bulletSpawnOffsetY = 0.3f;
 
     private float stepInterval;
     private float timer;
     private int direction = 1;
     private int initialEnemyCount;
+    private float shootTimer;
 
     void Start()
     {
@@ -51,6 +57,12 @@ public class EnemyManager : MonoBehaviour
         {
             timer = 0f;
             StepMove();
+        }
+        shootTimer += Time.deltaTime;
+        if (shootTimer >= shootInterval)
+        {
+            shootTimer = 0f;
+            FireFromRandomEnemy();
         }
     }
 
@@ -96,6 +108,18 @@ public class EnemyManager : MonoBehaviour
         {
             transform.position += Vector3.right * direction * stepX;
         }
+    }
+    
+    private void FireFromRandomEnemy()
+    {
+        if (enemyBulletPrefab == null) return;
+        if (transform.childCount == 0) return;
+
+        int index = Random.Range(0, transform.childCount);
+        Transform shooter = transform.GetChild(index);
+
+        Vector3 spawnPos = shooter.position + Vector3.down * bulletSpawnOffsetY;
+        Instantiate(enemyBulletPrefab, spawnPos, Quaternion.identity);
     }
 
     private float GetLeftMostX()

@@ -397,6 +397,9 @@ MonoBehaviour:
   minStepInterval: 0.15
   leftEdge: -8.5
   rightEdge: 8.5
+  enemyBulletPrefab: {fileID: 2457785739244962049, guid: 81c0ad7f68fed4e679a678f67edfe269, type: 3}
+  shootInterval: 1.2
+  bulletSpawnOffsetY: 0.3
 --- !u!4 &321873506
 Transform:
   m_ObjectHideFlags: 0
@@ -1371,7 +1374,7 @@ GameObject:
   - component: {fileID: 8869502065848164517}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
