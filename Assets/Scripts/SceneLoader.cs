@@ -16,8 +16,8 @@ public class SceneLoader : MonoBehaviour
             AsyncOperation loadOperations = SceneManager.LoadSceneAsync("Game");
             while (!loadOperations!.isDone) yield return null;
             
-            GameObject playerObj = GameObject.Find("Player");
-            Debug.Log(playerObj.name);
+            //GameObject playerObj = GameObject.Find("Player");
+            //Debug.Log(playerObj.name);
         }
     }
 }
