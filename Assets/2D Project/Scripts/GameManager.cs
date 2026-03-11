@@ -1,6 +1,8 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine.SceneManagement;
+using System.Collections;
 
 #if ENABLE_INPUT_SYSTEM && !ENABLE_LEGACY_INPUT_MANAGER
 using UnityEngine.InputSystem;
@@ -189,9 +191,20 @@ public class GameManager : MonoBehaviour
     
     public void GameOver()
     {
-        ShowOverlay("GAME OVER\nPRESS SPACE TO RESTART", float.MaxValue, true);
+        ShowOverlay("GAME OVER", float.MaxValue, true);
+        
+        StartCoroutine(GoToCreditsAfterDelay(2f));
     }
 
+    private IEnumerator GoToCreditsAfterDelay(float seconds)
+    {
+        yield return new WaitForSecondsRealtime(seconds);
+
+        
+        Time.timeScale = 1f;
+
+        SceneManager.LoadScene("CreditsScene");
+    }
     public void RestartLevel()
     {
         Time.timeScale = 1f;
